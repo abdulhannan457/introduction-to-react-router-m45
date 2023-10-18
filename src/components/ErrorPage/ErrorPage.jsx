@@ -24,13 +24,6 @@ const ErrorPage = () => {
 
 
 
-            {/* <p>{error.statusText || error.message}</p>
-            {
-                error.status === 404 && <div>
-                
-              <Link to={'/'}><button>Home</button></Link>
-              </div>
-            } */}
         </div>
     );
 };
