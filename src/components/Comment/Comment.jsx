@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Comment = ({comment}) => {
     const {id,name,email} = comment
@@ -12,6 +12,12 @@ const Comment = ({comment}) => {
         color: 'brown',
         fontFamily: 'cursive'
     }
+
+    const navigate = useNavigate()
+
+    const handleComment = ()=>{
+      navigate(`/comment/${id}`)
+    }
     return (
         <div style={commentStyle}>
             <h2>ID:{id}</h2>
@@ -19,6 +25,7 @@ const Comment = ({comment}) => {
             <h4>Email:{email}</h4>
             <Link to={`/comment/${comment.id}`}>Comment Details</Link>
             <Link to={`/comment/${comment.id}`}><button>Click Me</button></Link>
+            <button onClick={handleComment}>show Details</button>
             
         </div>
     );
