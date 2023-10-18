@@ -20,12 +20,14 @@ import Comments from './components/Comments/Comments.jsx';
 import CommentDetails from './components/CommentDetails/CommentDetails.jsx';
 import Todos from './components/Todos/Todos.jsx';
 import TodoDetails from './components/TodoDetails/TodoDetails.jsx';
+import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement: <ErrorPage></ErrorPage>,
     children : [
       {
         path: '/about',
